@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Beinomugisha Innocent | Software Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F7F9;--panel:#FFFFFF;--ink:#14213D;--muted:#4F5B6B;--line:#D5E0E6;--accent:#0A8591;--accent-ink:#FFFFFF;--soft:#E3F1F3;
+--head:"Bricolage Grotesque","Trebuchet MS",Arial,sans-serif;--body:"Source Sans 3","Segoe UI",Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0C1626;--panel:#13233A;--ink:#EAF2F7;--muted:#A5B4C4;--line:#24384F;--accent:#4FD1DC;--accent-ink:#0C1626;--soft:#12303B;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0C1626;--panel:#13233A;--ink:#EAF2F7;--muted:#A5B4C4;--line:#24384F;--accent:#4FD1DC;--accent-ink:#0C1626;--soft:#12303B;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;flex-wrap:wrap}
+.logo{font:800 20px var(--head);text-decoration:none}
+nav a{margin-left:20px;text-decoration:none;color:var(--muted);font-weight:600}
+nav a:hover{color:var(--accent)}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding:48px 0 72px}
+h1{font:800 clamp(2.6rem,6vw,4.6rem)/1 var(--head);margin:0 0 20px;letter-spacing:-.02em}
+.lead{font-size:1.3rem;color:var(--muted);max-width:34ch;margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.main{background:var(--accent);color:var(--accent-ink)}
+.btn.alt{color:var(--accent)}
+.pose{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:32px 32px}
+.pose svg{width:100%;height:auto;display:block}
+.pose .bone{stroke:var(--accent);stroke-width:4;stroke-linecap:round;fill:none}
+.pose .kp{fill:var(--panel);stroke:var(--ink);stroke-width:3}
+.pose .tag{font:600 13px var(--body);fill:var(--ink)}
+.pose .arc{stroke:var(--ink);stroke-width:2;fill:none;stroke-dasharray:4 4}
+@media (prefers-reduced-motion:no-preference){.pose .kp{animation:p 2.4s ease-in-out infinite}@keyframes p{50%{stroke:var(--accent);stroke-width:5}}}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font:700 clamp(1.8rem,4vw,2.4rem)/1.1 var(--head);margin:0 0 32px;letter-spacing:-.01em}
+h3{font:700 1.3rem/1.2 var(--head);margin:0 0 6px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.about p{margin:0 0 16px;max-width:60ch}
+.facts{list-style:none;margin:0;padding:0}
+.facts li{padding:12px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px}
+.facts span{color:var(--muted)}
+.feature{background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:12px;padding:28px;margin-bottom:28px}
+.feature p{max-width:70ch;margin:8px 0 16px}
+.stack{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.stack li{background:var(--soft);color:var(--ink);padding:3px 12px;border-radius:99px;font-size:.95rem;font-weight:600}
+.rows{display:grid;gap:0}
+.row{display:grid;grid-template-columns:1fr 1.4fr;gap:24px;padding:22px 0;border-top:1px solid var(--line)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row p{margin:0 0 12px;color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.skills h3{font-size:1.1rem;color:var(--accent)}
+.skills p{margin:0;color:var(--muted)}
+.time{border-left:3px solid var(--accent);padding-left:24px;margin-left:6px}
+.time article{margin-bottom:32px;position:relative}
+.time article::before{content:"";position:absolute;left:-33px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--accent)}
+.when{color:var(--accent);font-weight:600}
+.time p,.time ul{margin:6px 0 0;color:var(--muted)}
+.time ul{padding-left:20px}
+.contact{text-align:left}
+.contact p{max-width:50ch;color:var(--muted);margin:0 0 24px}
+footer{padding:28px 0 40px;color:var(--muted);border-top:1px solid var(--line);font-size:1rem}
+@media (max-width:760px){.hero,.about,.row{grid-template-columns:1fr}.hero{padding-top:24px}nav a{margin:0 16px 0 0}.pose{max-width:340px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<a class="logo" href="#top">Innocent B.</a>
+<nav aria-label="Sections"><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main id="top">
+<div class="hero">
+<div>
+<h1>Beinomugisha Innocent</h1>
+<p class="lead">I build mobile and web apps that see, learn and handle real business problems.</p>
+<div class="btns"><a class="btn main" href="#projects">See my projects</a><a class="btn alt" href="mailto:beinomugishainnocent2001@gmail.com">Email me</a></div>
+</div>
+<div class="pose" role="img" aria-label="Illustration of a body pose with joint keypoints, as detected by ROCKHAI">
+<svg viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg">
+<path class="bone" d="M110 105H190M110 105L82 170L96 232M190 105L218 170L204 232M110 105L125 225H175L190 105M125 225L116 305L110 365M175 225L184 305L190 365"/>
+<line class="bone" x1="150" y1="68" x2="150" y2="105"/>
+<circle class="bone" cx="150" cy="44" r="24"/>
+<path class="arc" d="M96 150A38 38 0 0 1 108 190"/>
+<g class="kp"><circle cx="110" cy="105" r="7"/><circle cx="190" cy="105" r="7"/><circle cx="82" cy="170" r="7"/><circle cx="218" cy="170" r="7"/><circle cx="96" cy="232" r="7"/><circle cx="204" cy="232" r="7"/><circle cx="125" cy="225" r="7"/><circle cx="175" cy="225" r="7"/><circle cx="116" cy="305" r="7"/><circle cx="184" cy="305" r="7"/><circle cx="110" cy="365" r="7"/><circle cx="190" cy="365" r="7"/></g>
+<text class="tag" x="8" y="148">elbow 92°</text>
+<text class="tag" x="206" y="318">knee</text>
+<text class="tag" x="206" y="98">shoulder</text>
+</svg>
+</div>
+</div>
+
+<section id="about">
+<h2>About me</h2>
+<div class="about">
+<div>
+<p>I am an Information Technology graduate from Uganda Christian University, Bishop Barham University College, with a Second Class Upper degree and a CGPA of 3.70.</p>
+<p>I like turning a real problem into a working product. My projects range from an AI posture coach that runs on a phone to a point-of-sale system for small businesses that takes mobile money.</p>
+<p>I am looking for an apprenticeship where I can go deeper into artificial intelligence and machine learning while shipping software people use.</p>
+</div>
+<ul class="facts">
+<li><span>Based in</span>Kampala, Uganda</li>
+<li><span>Degree</span>BSc Information Technology</li>
+<li><span>Graduated</span>30 October 2026</li>
+<li><span>Languages</span>English, Runyankore-Rukiga, Kiswahili</li>
+<li><span>Focus</span>AI, mobile, full-stack, blockchain</li>
+</ul>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<article class="feature">
+<h3>ROCKHAI: AI fitness posture coach</h3>
+<p>A mobile app that uses computer vision to read your posture during an exercise and gives corrective advice. The interface works in seven international languages, and a cloud backend stores user data and handles subscription payments.</p>
+<ul class="stack"><li>Flutter</li><li>MediaPipe</li><li>Python FastAPI</li><li>PostgreSQL</li></ul>
+</article>
+<div class="rows">
+<div class="row"><div><h3>SMARTBUZ POS</h3></div><div><p>Point-of-sale and business management for small shops: sales, inventory, reports and automation, with stock and debt tracking, MTN MoMo and Airtel Money collections, and customer SMS in English, Luganda and Runyankore.</p><ul class="stack"><li>Next.js</li><li>Convex</li></ul></div></div>
+<div class="row"><div><h3>OHIMS health insurance platform</h3></div><div><p>Policies, claims, billing and provider checks across four user roles, built to understand how insurance products work. Has a live demo.</p><ul class="stack"><li>React</li><li>TypeScript</li><li>Supabase</li><li>GitHub Actions</li></ul></div></div>
+<div class="row"><div><h3>Lead-generation system</h3></div><div><p>Helps a business find, organise and follow up potential customers in one place.</p></div></div>
+<div class="row"><div><h3>Smart contract demos</h3></div><div><p>Demonstration contracts written and tested locally to learn how blockchain applications are structured.</p><ul class="stack"><li>Solidity</li><li>Hardhat</li></ul></div></div>
+<div class="row"><div><h3>VulnScout Pro</h3></div><div><p>My final-year research project: a lightweight web vulnerability scanner with two-factor authentication.</p><ul class="stack"><li>Cybersecurity</li><li>Research</li></ul></div></div>
+<div class="row"><div><h3>Patient Management System</h3></div><div><p>A web app for managing patient records, deployed to the cloud.</p><ul class="stack"><li>Health informatics</li><li>Vercel</li></ul></div></div>
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<div><h3>Languages</h3><p>Python, JavaScript, TypeScript, Dart, Solidity, SQL</p></div>
+<div><h3>AI and computer vision</h3><p>MediaPipe, pose-based posture analysis, AI models and example applications</p></div>
+<div><h3>Frontend and mobile</h3><p>Flutter, Next.js, React</p></div>
+<div><h3>Backend and data</h3><p>FastAPI, PostgreSQL, MySQL, Supabase, Convex</p></div>
+<div><h3>Blockchain</h3><p>Solidity smart contracts, Hardhat</p></div>
+<div><h3>Tools and business</h3><p>Git, GitHub Actions, Vercel, LAN setup, digital marketing, lead generation, mobile money and SMS integration</p></div>
+</div>
+</section>
+
+<section id="experience">
+<h2>Experience and education</h2>
+<div class="time">
+<article><span class="when">Ongoing</span><h3>Founder and Solutions Developer, self-employed</h3><ul><li>Built websites for multiple clients, from their needs to a finished product.</li><li>Design software for small businesses, from lead generation to sales and inventory.</li></ul></article>
+<article><span class="when">October 2026</span><h3>BSc Information Technology, Uganda Christian University</h3><p>Bishop Barham University College, Kabale. Second Class Upper Division, CGPA 3.70.</p></article>
+<article><span class="when">July to September 2025</span><h3>IT Intern, Codinex Computers Ltd, Mbarara</h3><ul><li>Worked in a team on technology projects in a live business, including LAN setup and configuration.</li><li>Gained exposure to AI models and example applications, including computer vision.</li></ul></article>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Let’s talk</h2>
+<p>I am applying to the ASCEND Apprenticeship Program at E&amp;M Tech House. Send me a message and I will reply quickly.</p>
+<div class="btns"><a class="btn main" href="mailto:beinomugishainnocent2001@gmail.com">beinomugishainnocent2001@gmail.com</a><a class="btn alt" href="tel:+256786834364">+256 786 834 364</a><a class="btn alt" href="https://github.com/BEINOMUGISHA">GitHub</a></div>
+</section>
+</main>
+<footer>Beinomugisha Innocent, Kampala, Uganda</footer>
+</div>
+</body>
+</html>
